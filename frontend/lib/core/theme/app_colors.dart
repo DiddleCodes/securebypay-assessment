@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 abstract final class AppColors {
   static const primary = Color(0xFF5A65AB);
   static const primaryLight = Color(0xFF737CB8);
+  static const buttonEdgeTop = Color(0xFF6871A6);
+  static const buttonEdgeBottom = Color(0xFF515B9A);
+  static const buttonShadow = Color(0x2E000000);
   static const navy = Color(0xFF262A48);
 
   static const background = Color(0xFFFAFAFA);
@@ -16,10 +19,12 @@ abstract final class AppColors {
   static const textPlaceholder = Color(0xFFA3A3A3);
   static const textBody = Color(0xFF3A3A3A);
   static const textLabel = Color(0xFF808080);
+  static const icon = Color(0xFFA3A3A3);
   static const textHeading = Color(0xFF1D2939);
   static const onPrimary = Color(0xFFFFFFFF);
+  // Mint-tinted white the design uses for text on brand surfaces (buttons, panel copy, active nav)
+  static const onBrand = Color(0xFFEBFFE2);
 
-  static const navActiveForeground = Color(0xFFEBFFE2);
   static const positive = Color(0xFF0A7D00);
   static const error = Color(0xFFD92D20);
 

@@ -10,13 +10,14 @@ abstract final class AppTextStyles {
     color: AppColors.textPrimary,
     fontWeight: FontWeight.w400,
     height: 1.4,
+    // Matches Figma/CSS, which split extra line height evenly above and below the glyphs
+    leadingDistribution: TextLeadingDistribution.even,
   );
 
   static final authTitle = _base.copyWith(
     fontSize: 32,
     fontWeight: FontWeight.w700,
-    letterSpacing: -0.2,
-    height: 1.25,
+    height: 1.3,
   );
   static final authSubtitle = _base.copyWith(
     fontSize: 14,
@@ -27,8 +28,13 @@ abstract final class AppTextStyles {
     fontSize: 24,
     fontWeight: FontWeight.w600,
     color: AppColors.onPrimary,
+    height: 35 / 24,
   );
-  static final panelBody = _base.copyWith(fontSize: 18, color: AppColors.onPrimary);
+  static final panelBody = _base.copyWith(
+    fontSize: 18,
+    color: AppColors.onBrand,
+    height: 30 / 18,
+  );
 
   static final pageTitle = _base.copyWith(fontSize: 20, fontWeight: FontWeight.w600);
   static final pageSubtitle = _base.copyWith(fontSize: 12, color: AppColors.textSecondary);
@@ -36,6 +42,7 @@ abstract final class AppTextStyles {
   static final cardTitle = _base.copyWith(fontSize: 18, color: AppColors.textHeading);
 
   static final label = _base.copyWith(fontSize: 16, height: 1.25);
+  static final fieldError = _base.copyWith(fontSize: 12, color: AppColors.error, height: 1.3);
   static final input = _base.copyWith(fontSize: 16, height: 1.25);
   static final body = _base.copyWith(fontSize: 16);
   static final bodySmall = _base.copyWith(fontSize: 14);
@@ -45,20 +52,21 @@ abstract final class AppTextStyles {
   static final button = _base.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w600,
-    color: AppColors.onPrimary,
+    color: AppColors.onBrand,
     height: 1.0,
   );
   static final link = _base.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w600,
     color: AppColors.primary,
+    height: 22 / 14,
     decoration: TextDecoration.underline,
     decorationColor: AppColors.primary,
   );
   static final navItem = _base.copyWith(fontSize: 16, color: AppColors.textSecondary, height: 1.25);
   static final navItemActive = navItem.copyWith(
     fontWeight: FontWeight.w600,
-    color: AppColors.navActiveForeground,
+    color: AppColors.onBrand,
   );
 
   static final balance = _base.copyWith(

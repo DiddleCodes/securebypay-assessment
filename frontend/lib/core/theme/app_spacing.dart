@@ -5,6 +5,11 @@ abstract final class AppSpacing {
   static const lg = 16.0;
   static const xl = 24.0;
   static const xxl = 36.0;
+
+  static const fieldGap = 31.0;
+  static const inputHeight = 48.0;
+  static const buttonHeight = 52.0;
+  static const mobileGutter = 24.0;
 }
 
 abstract final class AppRadius {
