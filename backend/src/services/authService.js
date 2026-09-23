@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const prisma = require('../lib/prisma');
 const HttpError = require('../lib/httpError');
+const { buildShipment, randomDateBetween } = require('../lib/sampleShipments');
+const { startOfMonth } = require('../lib/dates');
 const { jwtSecret, jwtExpiresIn } = require('../config');
 
 const SALT_ROUNDS = 10;
@@ -21,6 +23,15 @@ const publicUserFields = {
   createdAt: true,
 };
 
+// Gives a new account a few shipments this month and last so the dashboard has something to show
+function sampleShipments(now = new Date()) {
+  const thisMonth = [startOfMonth(now), now];
+  const lastMonth = [startOfMonth(now, -1), startOfMonth(now)];
+  return [thisMonth, thisMonth, thisMonth, thisMonth, lastMonth, lastMonth].map(([start, end]) =>
+    buildShipment({ createdAt: randomDateBetween(start, end) }),
+  );
+}
+
 function signToken(userId) {
   return jwt.sign({ sub: userId }, jwtSecret, { expiresIn: jwtExpiresIn });
 }
@@ -34,7 +45,11 @@ async function register({ password, ...data }) {
   }
 
   const user = await prisma.user.create({
-    data: { ...data, passwordHash: await bcrypt.hash(password, SALT_ROUNDS) },
+    data: {
+      ...data,
+      passwordHash: await bcrypt.hash(password, SALT_ROUNDS),
+      shipments: { create: sampleShipments() },
+    },
     select: publicUserFields,
   });
 
