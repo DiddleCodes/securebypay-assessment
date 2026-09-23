@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ShipmentStatus {
+  IN_TRANSIT
+  DELAYED
+  DELIVERED
+  PENDING
+}
+
+enum ShipmentDirection {
+  EXPORT
+  IMPORT
+}
+
+enum TransactionType {
+  FUND
+  PAYMENT
+}
+
+model User {
+  id            String   @id @default(uuid())
+  firstName     String
+  lastName      String
+  email         String   @unique
+  phoneCode     String
+  phoneNumber   String
+  passwordHash  String
+  avatarUrl     String?
+  walletBalance Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  shipments    Shipment[]
+  transactions WalletTransaction[]
+}
+
+model Shipment {
+  id              String            @id @default(uuid())
+  userId          String
+  trackingId      String            @unique
+  senderName      String
+  receiverName    String
+  pickupCity      String
+  pickupCountry   String
+  deliveryCity    String
+  deliveryCountry String
+  amount          Int
+  status          ShipmentStatus    @default(PENDING)
+  direction       ShipmentDirection
+  isPaid          Boolean           @default(false)
+  processingHours Int
+  createdAt       DateTime          @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model WalletTransaction {
+  id        String          @id @default(uuid())
+  userId    String
+  type      TransactionType
+  amount    Int
+  reference String          @unique
+  createdAt DateTime        @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model ShipmentStat {
+  date  DateTime @id @db.Date
+  count Int
+}
