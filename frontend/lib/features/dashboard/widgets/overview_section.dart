@@ -140,7 +140,7 @@ class _OverviewLayout extends StatelessWidget {
             SizedBox(height: height, child: balance),
             for (final stat in stats) ...[
               const SizedBox(height: AppSpacing.md),
-              SizedBox(height: 132, child: stat),
+              SizedBox(height: 136, child: stat),
             ],
           ],
         );

@@ -111,26 +111,32 @@ abstract final class AppTextStyles {
   );
   static final smallButton = _base.copyWith(fontSize: 12, fontWeight: FontWeight.w500, height: 1.0);
   static final statLabel = _base.copyWith(
-    fontSize: 14,
+    fontSize: 12,
     color: AppColors.textSecondary,
     height: 1.3,
   );
+  static const statFontFamily = 'Montserrat';
   static final statValue = _base.copyWith(
+    fontFamily: statFontFamily,
     fontSize: 24,
     fontWeight: FontWeight.w500,
     color: AppColors.textBody,
     height: 1.3,
   );
   static final comparisonLabel = _base.copyWith(
-    fontSize: 10,
+    fontFamily: statFontFamily,
+    fontSize: 8,
     color: AppColors.textBody,
-    height: 1.3,
+    height: 2,
+    letterSpacing: 8 * 0.004,
   );
   static final comparisonValue = _base.copyWith(
-    fontSize: 12,
+    fontFamily: statFontFamily,
+    fontSize: 11,
     fontWeight: FontWeight.w500,
     color: AppColors.textBody,
-    height: 1.3,
+    height: 16 / 11,
+    letterSpacing: 11 * 0.005,
   );
   static final changePositive = _base.copyWith(
     fontSize: 12,
