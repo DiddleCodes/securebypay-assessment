@@ -57,7 +57,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
     setState(() => _submitting = true);
     try {
-      await ref.read(authControllerProvider.notifier).register(
+      await ref
+          .read(authControllerProvider.notifier)
+          .register(
             firstName: _firstName.text.trim(),
             lastName: _lastName.text.trim(),
             email: _email.text.trim(),
@@ -104,14 +106,16 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
     return AuthLayout(
       formTop: 209,
       panelTitle: 'Seamlessly Delivering to Over 300 Countries from Nigeria!',
-      panelBody: 'Access global markets with our quick shipping from Nigeria! Fast delivery and '
+      panelBody:
+          'Access global markets with our quick shipping from Nigeria! Fast delivery and '
           'easy customs to 300+ countries.',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AuthHeading(
             title: 'Create an account',
-            subtitle: 'Sign up for Myafrimall and gain unlimited access to shipping to over 300 '
+            subtitle:
+                'Sign up for Myafrimall and gain unlimited access to shipping to over 300 '
                 'countries from Nigeria. Do you already have an account?',
             linkLabel: 'Login',
             onLinkTap: () => context.go(Routes.login),

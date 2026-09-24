@@ -53,7 +53,9 @@ class AuthLayout extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: AuthPanel(title: panelTitle, body: panelBody)),
+            Expanded(
+              child: AuthPanel(title: panelTitle, body: panelBody),
+            ),
           ],
         ),
       );

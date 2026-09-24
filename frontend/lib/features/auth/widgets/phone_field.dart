@@ -47,7 +47,10 @@ class PhoneField extends StatelessWidget {
             position: PopupMenuPosition.under,
             itemBuilder: (context) => [
               for (final code in countryCodes)
-                PopupMenuItem(value: code, child: Text(code, style: AppTextStyles.bodySmall)),
+                PopupMenuItem(
+                  value: code,
+                  child: Text(code, style: AppTextStyles.bodySmall),
+                ),
             ],
             child: Row(
               mainAxisSize: MainAxisSize.min,

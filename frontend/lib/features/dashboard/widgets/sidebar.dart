@@ -92,10 +92,7 @@ class _UserSummary extends StatelessWidget {
         padding: const EdgeInsets.only(left: AppSpacing.lg),
         child: Row(
           children: [
-            const CircleAvatar(
-              radius: 24,
-              backgroundImage: AssetImage('assets/images/avatar.png'),
-            ),
+            const CircleAvatar(radius: 24, backgroundImage: AssetImage('assets/images/avatar.png')),
             const SizedBox(width: AppSpacing.sm),
             Expanded(
               child: Text(

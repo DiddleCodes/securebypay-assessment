@@ -11,15 +11,15 @@ class User {
   });
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-        id: json['id'] as String,
-        firstName: json['firstName'] as String,
-        lastName: json['lastName'] as String,
-        email: json['email'] as String,
-        phoneCode: json['phoneCode'] as String,
-        phoneNumber: json['phoneNumber'] as String,
-        walletBalance: json['walletBalance'] as int,
-        avatarUrl: json['avatarUrl'] as String?,
-      );
+    id: json['id'] as String,
+    firstName: json['firstName'] as String,
+    lastName: json['lastName'] as String,
+    email: json['email'] as String,
+    phoneCode: json['phoneCode'] as String,
+    phoneNumber: json['phoneNumber'] as String,
+    walletBalance: json['walletBalance'] as int,
+    avatarUrl: json['avatarUrl'] as String?,
+  );
 
   final String id;
   final String firstName;

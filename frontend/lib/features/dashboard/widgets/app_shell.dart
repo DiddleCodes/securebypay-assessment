@@ -28,10 +28,8 @@ class AppShell extends StatelessWidget {
               shape: const RoundedRectangleBorder(),
               backgroundColor: AppColors.surface,
               child: Builder(
-                builder: (context) => Sidebar(
-                  location: location,
-                  onNavigate: () => Navigator.of(context).pop(),
-                ),
+                builder: (context) =>
+                    Sidebar(location: location, onNavigate: () => Navigator.of(context).pop()),
               ),
             ),
       body: Row(

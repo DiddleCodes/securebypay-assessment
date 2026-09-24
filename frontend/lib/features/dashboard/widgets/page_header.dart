@@ -19,13 +19,17 @@ class PageHeader extends StatelessWidget {
     final compact = onMenuTap != null;
 
     return Container(
+      // Fixed at the design's 96px on desktop; the compact header grows with its wrapped subtitle
+      height: compact ? null : AppSpacing.headerHeight,
       constraints: const BoxConstraints(minHeight: AppSpacing.headerHeight),
-      padding: EdgeInsets.fromLTRB(
-        compact ? AppSpacing.md : AppSpacing.contentGutter,
-        compact ? AppSpacing.md : 15,
-        AppSpacing.contentGutter,
-        AppSpacing.md,
-      ),
+      padding: compact
+          ? const EdgeInsets.fromLTRB(
+              AppSpacing.md,
+              AppSpacing.md,
+              AppSpacing.contentGutter,
+              AppSpacing.md,
+            )
+          : const EdgeInsets.fromLTRB(AppSpacing.contentGutter, 15, AppSpacing.contentGutter, 0),
       decoration: const BoxDecoration(
         color: AppColors.surface,
         border: Border(bottom: BorderSide(color: AppColors.border)),

@@ -69,14 +69,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     return AuthLayout(
       formTop: 255,
       panelTitle: 'Effortlessly Track Your Shipments from Nigeria!',
-      panelBody: 'Monitor your shipments from Nigeria! Enjoy swift delivery and seamless customs '
+      panelBody:
+          'Monitor your shipments from Nigeria! Enjoy swift delivery and seamless customs '
           'processing',
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AuthHeading(
             title: 'Sign in to your account',
-            subtitle: 'Log in to Myafrimall to enjoy seamless shipping to over 300 countries right '
+            subtitle:
+                'Log in to Myafrimall to enjoy seamless shipping to over 300 countries right '
                 'from Nigeria.. Don’t have an account yet?',
             linkLabel: 'Sign Up',
             onLinkTap: () => context.go(Routes.register),
@@ -123,8 +125,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           const SizedBox(height: 15),
           TextLink(
             'Forgot Password?',
-            onTap: () =>
-                showAppSnackBar(context, 'Password reset is not available in this demo.'),
+            onTap: () => showAppSnackBar(context, 'Password reset is not available in this demo.'),
           ),
           const SizedBox(height: 44),
           PrimaryButton(

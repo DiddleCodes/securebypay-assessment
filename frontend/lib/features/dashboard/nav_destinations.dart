@@ -17,7 +17,8 @@ class NavDestination {
   final String subtitle;
 }
 
-const _addressesSubtitle = 'Keep track of your addresses,  location updates. Edit, Delete, Update '
+const _addressesSubtitle =
+    'Keep track of your addresses,  location updates. Edit, Delete, Update '
     'and see all your saved addresses';
 
 const navDestinations = [
@@ -81,6 +82,6 @@ const navDestinations = [
 ];
 
 NavDestination destinationFor(String location) => navDestinations.firstWhere(
-      (destination) => location.startsWith(destination.path),
-      orElse: () => navDestinations.first,
-    );
+  (destination) => location.startsWith(destination.path),
+  orElse: () => navDestinations.first,
+);

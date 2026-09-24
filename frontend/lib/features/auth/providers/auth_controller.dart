@@ -37,14 +37,16 @@ class AuthController extends AsyncNotifier<User?> {
     required String phoneNumber,
     required String password,
   }) async {
-    await _startSession(await _repository.register(
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phoneCode: phoneCode,
-      phoneNumber: phoneNumber,
-      password: password,
-    ));
+    await _startSession(
+      await _repository.register(
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneCode: phoneCode,
+        phoneNumber: phoneNumber,
+        password: password,
+      ),
+    );
   }
 
   Future<void> logout() async {

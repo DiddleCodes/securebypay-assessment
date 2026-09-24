@@ -24,15 +24,14 @@ class AuthRepository {
     required String phoneCode,
     required String phoneNumber,
     required String password,
-  }) =>
-      _authenticate('/auth/register', {
-        'firstName': firstName,
-        'lastName': lastName,
-        'email': email,
-        'phoneCode': phoneCode,
-        'phoneNumber': phoneNumber,
-        'password': password,
-      });
+  }) => _authenticate('/auth/register', {
+    'firstName': firstName,
+    'lastName': lastName,
+    'email': email,
+    'phoneCode': phoneCode,
+    'phoneNumber': phoneNumber,
+    'password': password,
+  });
 
   Future<User> me() async {
     try {
