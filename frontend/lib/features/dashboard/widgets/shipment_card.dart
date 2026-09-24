@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/network/api_exception.dart';
 import '../../../core/theme/app_button_styles.dart';
@@ -172,7 +173,7 @@ class _Summary extends StatelessWidget {
               child: AnimatedRotation(
                 turns: expanded ? 0 : 0.5,
                 duration: const Duration(milliseconds: 200),
-                child: const Icon(LucideIcons.chevronUp, size: 24, color: AppColors.chevron),
+                child: const Icon(AppIcons.chevronUp, size: 24, color: AppColors.chevron),
               ),
             ),
           ],
@@ -295,7 +296,7 @@ class _FooterState extends ConsumerState<_Footer> {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(LucideIcons.timer, size: 24, color: AppColors.textBody),
+          const Icon(AppIcons.timer, size: 24, color: AppColors.textBody),
           const SizedBox(width: AppSpacing.sm),
           Text('${shipment.processingHours} hours', style: AppTextStyles.fieldValue),
         ],

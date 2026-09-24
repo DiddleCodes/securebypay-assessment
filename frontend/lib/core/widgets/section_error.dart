@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../theme/app_icons.dart';
 
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
@@ -27,7 +28,7 @@ class SectionError extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Icon(LucideIcons.cloudAlert, color: AppColors.textMuted),
+          const Icon(AppIcons.cloudAlert, color: AppColors.textMuted),
           const SizedBox(height: AppSpacing.sm),
           Text(
             error.toString(),

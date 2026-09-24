@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../core/theme/app_icons.dart';
 
 class NavDestination {
   const NavDestination({
@@ -26,56 +27,56 @@ const navDestinations = [
   NavDestination(
     label: 'Dashboard',
     path: '/dashboard',
-    icon: LucideIcons.layoutDashboard,
+    icon: AppIcons.layoutDashboard,
     title: 'Invite & Earn',
     subtitle: _addressesSubtitle,
   ),
   NavDestination(
     label: 'Shipments',
     path: '/shipments',
-    icon: LucideIcons.ship,
+    icon: AppIcons.ship,
     title: 'Shipments',
     subtitle: 'Track, manage and pay for every shipment in one place',
   ),
   NavDestination(
     label: 'Our Services',
     path: '/services',
-    icon: LucideIcons.globe,
+    icon: AppIcons.globe,
     title: 'Our Services',
     subtitle: 'Explore the shipping services available from Nigeria',
   ),
   NavDestination(
     label: 'Notifications',
     path: '/notifications',
-    icon: LucideIcons.bell,
+    icon: AppIcons.bell,
     title: 'Notifications',
     subtitle: 'Updates on your shipments, payments and account',
   ),
   NavDestination(
     label: 'Wallet',
     path: '/wallet',
-    icon: LucideIcons.creditCard,
+    icon: AppIcons.creditCard,
     title: 'Wallet',
     subtitle: 'Fund your wallet and review your transactions',
   ),
   NavDestination(
     label: 'My Addresses',
     path: '/addresses',
-    icon: LucideIcons.locateFixed,
+    icon: AppIcons.locateFixed,
     title: 'My Addresses',
     subtitle: _addressesSubtitle,
   ),
   NavDestination(
     label: 'Invite & Earn',
     path: '/invite',
-    icon: LucideIcons.badgeDollarSign,
+    icon: AppIcons.badgeDollarSign,
     title: 'Invite & Earn',
     subtitle: 'Invite friends to Myafrimall and earn when they ship',
   ),
   NavDestination(
     label: 'Help Center',
     path: '/help',
-    icon: LucideIcons.handHelping,
+    icon: AppIcons.handHelping,
     title: 'Help Center',
     subtitle: 'Find answers or get in touch with our support team',
   ),

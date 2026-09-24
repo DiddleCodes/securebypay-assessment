@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
@@ -64,7 +65,7 @@ class Sidebar extends ConsumerWidget {
                 if (user != null) _UserSummary(firstName: user.firstName, lastName: user.lastName),
                 const SizedBox(height: AppSpacing.xl),
                 SidebarItem(
-                  icon: LucideIcons.logOut,
+                  icon: AppIcons.logOut,
                   label: 'Logout',
                   onTap: () => ref.read(authControllerProvider.notifier).logout(),
                 ),

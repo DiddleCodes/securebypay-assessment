@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
@@ -66,7 +67,7 @@ class PhoneField extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 3),
-                const Icon(LucideIcons.chevronDown, size: 20, color: AppColors.icon),
+                const Icon(AppIcons.chevronDown, size: 20, color: AppColors.icon),
               ],
             ),
           ),

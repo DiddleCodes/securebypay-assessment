@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
@@ -37,7 +38,7 @@ class ComingSoonScreen extends StatelessWidget {
             const SizedBox(height: AppSpacing.xl),
             OutlinedButton.icon(
               onPressed: () => context.go(navDestinations.first.path),
-              icon: const Icon(LucideIcons.layoutDashboard, size: 18),
+              icon: const Icon(AppIcons.layoutDashboard, size: 18),
               label: const Text('Back to dashboard'),
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
@@ -9,22 +10,12 @@ import '../data/overview.dart';
 enum StatKind {
   shipments(
     'Total Shipment',
-    LucideIcons.truck,
+    AppIcons.truck,
     AppColors.shipmentIconBackground,
     AppColors.shipmentIcon,
   ),
-  exports(
-    'Total Exports',
-    LucideIcons.arrowUp,
-    AppColors.exportIconBackground,
-    AppColors.exportIcon,
-  ),
-  imports(
-    'Total Import',
-    LucideIcons.arrowDown,
-    AppColors.importIconBackground,
-    AppColors.importIcon,
-  );
+  exports('Total Exports', AppIcons.arrowUp, AppColors.exportIconBackground, AppColors.exportIcon),
+  imports('Total Import', AppIcons.arrowDown, AppColors.importIconBackground, AppColors.importIcon);
 
   const StatKind(this.label, this.icon, this.background, this.foreground);
 
@@ -67,7 +58,7 @@ class StatCard extends StatelessWidget {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(color: kind.background, shape: BoxShape.circle),
-                child: Icon(kind.icon, size: 20, color: kind.foreground),
+                child: Icon(kind.icon, size: 24, color: kind.foreground),
               ),
               const SizedBox(width: AppSpacing.sm),
               Flexible(
@@ -120,7 +111,7 @@ class _Change extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(up ? LucideIcons.arrowUp : LucideIcons.arrowDown, size: 12, color: color),
+        Icon(up ? AppIcons.arrowUp : AppIcons.arrowDown, size: 12, color: color),
         const SizedBox(width: 2),
         Text('${percent.abs()}%', style: AppTextStyles.changePositive.copyWith(color: color)),
       ],

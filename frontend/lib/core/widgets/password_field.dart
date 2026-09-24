@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../theme/app_icons.dart';
 
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
@@ -53,11 +54,7 @@ class _PasswordFieldState extends State<PasswordField> {
             padding: EdgeInsets.zero,
             constraints: const BoxConstraints(),
             style: IconButton.styleFrom(tapTargetSize: MaterialTapTargetSize.shrinkWrap),
-            icon: Icon(
-              _obscured ? LucideIcons.eyeOff : LucideIcons.eye,
-              size: 24,
-              color: AppColors.icon,
-            ),
+            icon: Icon(_obscured ? AppIcons.eyeOff : AppIcons.eye, size: 24, color: AppColors.icon),
           ),
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
@@ -41,7 +42,7 @@ class PageHeader extends StatelessWidget {
             IconButton(
               onPressed: onMenuTap,
               tooltip: 'Open navigation',
-              icon: const Icon(LucideIcons.menu, color: AppColors.textPrimary),
+              icon: const Icon(AppIcons.menu, color: AppColors.textPrimary),
             ),
             const SizedBox(width: AppSpacing.xs),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lucide_icons_flutter/lucide_icons.dart';
+
+import '../../../core/theme/app_icons.dart';
 
 import '../../../core/theme/app_button_styles.dart';
 import '../../../core/theme/app_colors.dart';
@@ -36,7 +37,7 @@ class PeriodFilter extends StatelessWidget {
           children: [
             Text(value.label),
             const SizedBox(width: 6),
-            const Icon(LucideIcons.chevronDown, size: 16, color: AppColors.textMuted),
+            const Icon(AppIcons.chevronDown, size: 16, color: AppColors.textMuted),
           ],
         ),
       ),
