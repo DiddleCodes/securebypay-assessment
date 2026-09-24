@@ -28,6 +28,22 @@ abstract final class AppColors {
   static const positive = Color(0xFF0A7D00);
   static const error = Color(0xFFD92D20);
 
+  static const cardBorder = Color(0xFFEDEBEB);
+  static const skeleton = Color(0xFFEEEEEE);
+  static const dotInactive = Color(0xFFD4D4D4);
+  static const chevron = Color(0xFF003701);
+  // Figma layers white at 70% / 90% over the primary balance card
+  static const balanceLabel = Color(0xB3FFFFFF);
+  static const balanceAmount = Color(0xE6FFFFFF);
+  static const bannerStripe = Color(0x12000000);
+
+  // The chart card uses the Untitled UI grey scale
+  static const chartAxis = Color(0xFF98A2B3);
+  static const chartGrid = Color(0xFFE4E7EC);
+  static const segmentTrack = Color(0xFFF2F4F7);
+  static const segmentText = Color(0xFF667085);
+  static const segmentSelectedText = Color(0xFF101828);
+
   static const shipmentIconBackground = Color(0xFFF4E3C4);
   static const shipmentIcon = Color(0xFFC98810);
   static const exportIconBackground = Color(0xFFD9FFD7);
@@ -39,6 +55,10 @@ abstract final class AppColors {
   static const inTransitText = Color(0xFFCB854B);
   static const delayedBackground = Color(0xFFC0FBFF);
   static const delayedText = Color(0xFF003337);
+  static const deliveredBackground = Color(0xFFD9FFD7);
+  static const deliveredText = Color(0xFF0A7D00);
+  static const pendingBackground = Color(0xFFF2F4F7);
+  static const pendingText = Color(0xFF667085);
   static const paidBackground = Color(0xFFEFEDED);
   static const paidText = Color(0xFF808080);
 }

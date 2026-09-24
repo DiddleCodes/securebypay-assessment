@@ -19,4 +19,5 @@ abstract final class AppSpacing {
 abstract final class AppRadius {
   static const sm = 6.0;
   static const md = 8.0;
+  static const lg = 12.0;
 }

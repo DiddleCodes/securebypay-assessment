@@ -14,11 +14,7 @@ abstract final class AppTextStyles {
     leadingDistribution: TextLeadingDistribution.even,
   );
 
-  static final authTitle = _base.copyWith(
-    fontSize: 32,
-    fontWeight: FontWeight.w700,
-    height: 1.3,
-  );
+  static final authTitle = _base.copyWith(fontSize: 32, fontWeight: FontWeight.w700, height: 1.3);
   static final authSubtitle = _base.copyWith(
     fontSize: 14,
     height: 22 / 14,
@@ -30,11 +26,7 @@ abstract final class AppTextStyles {
     color: AppColors.onPrimary,
     height: 35 / 24,
   );
-  static final panelBody = _base.copyWith(
-    fontSize: 18,
-    color: AppColors.onBrand,
-    height: 30 / 18,
-  );
+  static final panelBody = _base.copyWith(fontSize: 18, color: AppColors.onBrand, height: 30 / 18);
 
   static final pageTitle = _base.copyWith(fontSize: 20, fontWeight: FontWeight.w600, height: 1.3);
   static final pageSubtitle = _base.copyWith(
@@ -47,8 +39,36 @@ abstract final class AppTextStyles {
     color: AppColors.textSecondary,
     height: 20 / 14,
   );
-  static final sectionTitle = _base.copyWith(fontSize: 24, fontWeight: FontWeight.w600);
-  static final cardTitle = _base.copyWith(fontSize: 18, color: AppColors.textHeading);
+  static final sectionTitle = _base.copyWith(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    height: 1.3,
+    letterSpacing: -0.5,
+  );
+  static final cardTitle = _base.copyWith(
+    fontSize: 18,
+    color: AppColors.textHeading,
+    height: 26 / 18,
+  );
+  static final bannerHeadline = _base.copyWith(
+    fontSize: 44,
+    fontWeight: FontWeight.w700,
+    color: AppColors.onPrimary,
+    height: 1.0,
+    letterSpacing: -1.5,
+  );
+  static final filterButton = _base.copyWith(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textMuted,
+    height: 1.0,
+  );
+  static final segment = _base.copyWith(fontSize: 16, color: AppColors.segmentText, height: 1.0);
+  static final segmentSelected = segment.copyWith(
+    fontWeight: FontWeight.w500,
+    color: AppColors.segmentSelectedText,
+  );
+  static final chartAxis = _base.copyWith(fontSize: 12, color: AppColors.chartAxis, height: 1.0);
 
   static final label = _base.copyWith(fontSize: 16, height: 1.25);
   static final fieldError = _base.copyWith(fontSize: 12, color: AppColors.error, height: 1.3);
@@ -78,18 +98,52 @@ abstract final class AppTextStyles {
     color: AppColors.onBrand,
   );
 
+  static final balanceLabel = _base.copyWith(
+    fontSize: 12,
+    color: AppColors.balanceLabel,
+    height: 16 / 12,
+  );
   static final balance = _base.copyWith(
     fontSize: 24,
     fontWeight: FontWeight.w600,
-    color: AppColors.onPrimary,
+    color: AppColors.balanceAmount,
+    height: 32 / 24,
   );
-  static final statValue = _base.copyWith(fontSize: 24, fontWeight: FontWeight.w500);
+  static final smallButton = _base.copyWith(fontSize: 12, fontWeight: FontWeight.w500, height: 1.0);
+  static final statLabel = _base.copyWith(
+    fontSize: 14,
+    color: AppColors.textSecondary,
+    height: 1.3,
+  );
+  static final statValue = _base.copyWith(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textBody,
+    height: 1.3,
+  );
+  static final comparisonLabel = _base.copyWith(
+    fontSize: 10,
+    color: AppColors.textBody,
+    height: 1.3,
+  );
+  static final comparisonValue = _base.copyWith(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textBody,
+    height: 1.3,
+  );
   static final changePositive = _base.copyWith(
     fontSize: 12,
     color: AppColors.positive,
     height: 1.0,
   );
-  static final fieldLabel = _base.copyWith(fontSize: 12, color: AppColors.textLabel);
-  static final fieldValue = _base.copyWith(fontSize: 16, color: AppColors.textBody);
-  static final badge = _base.copyWith(fontSize: 12, fontWeight: FontWeight.w500, height: 1.0);
+  static final fieldLabel = _base.copyWith(
+    fontSize: 12,
+    color: AppColors.textLabel,
+    height: 16 / 12,
+  );
+  static final fieldValue = _base.copyWith(fontSize: 16, color: AppColors.textPrimary, height: 1.5);
+  static final locationValue = fieldValue.copyWith(fontSize: 14, height: 22 / 14);
+  static final badge = _base.copyWith(fontSize: 12, height: 1.0);
+  static final cardAction = _base.copyWith(fontSize: 12, fontWeight: FontWeight.w600, height: 1.0);
 }

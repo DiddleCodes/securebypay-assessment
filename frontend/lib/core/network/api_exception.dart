@@ -19,14 +19,16 @@ class ApiException implements Exception {
     return switch (error.type) {
       DioExceptionType.connectionTimeout ||
       DioExceptionType.receiveTimeout ||
-      DioExceptionType.sendTimeout =>
-        const ApiException('The server took too long to respond. Please try again.'),
-      DioExceptionType.connectionError =>
-        const ApiException("Can't reach the server. Check your connection and try again."),
+      DioExceptionType.sendTimeout => const ApiException(
+        'The server took too long to respond. Please try again.',
+      ),
+      DioExceptionType.connectionError => const ApiException(
+        "Can't reach the server. Check your connection and try again.",
+      ),
       _ => ApiException(
-          'Something went wrong. Please try again.',
-          statusCode: error.response?.statusCode,
-        ),
+        'Something went wrong. Please try again.',
+        statusCode: error.response?.statusCode,
+      ),
     };
   }
 

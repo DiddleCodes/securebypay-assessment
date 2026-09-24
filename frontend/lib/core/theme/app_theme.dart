@@ -7,9 +7,9 @@ import 'app_text_styles.dart';
 abstract final class AppTheme {
   static ThemeData get light {
     OutlineInputBorder border(Color color) => OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppRadius.md),
-          borderSide: BorderSide(color: color),
-        );
+      borderRadius: BorderRadius.circular(AppRadius.md),
+      borderSide: BorderSide(color: color),
+    );
 
     return ThemeData(
       useMaterial3: true,
@@ -67,6 +67,16 @@ abstract final class AppTheme {
           minimumSize: const Size(0, 36),
           textStyle: AppTextStyles.bodySmall.copyWith(fontWeight: FontWeight.w500),
         ),
+      ),
+      menuTheme: const MenuThemeData(
+        style: MenuStyle(
+          backgroundColor: WidgetStatePropertyAll(AppColors.surface),
+          surfaceTintColor: WidgetStatePropertyAll(Colors.transparent),
+        ),
+      ),
+      popupMenuTheme: const PopupMenuThemeData(
+        color: AppColors.surface,
+        surfaceTintColor: Colors.transparent,
       ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(color: AppColors.primary),
     );
