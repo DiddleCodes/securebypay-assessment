@@ -7,7 +7,10 @@ import 'features/auth/providers/auth_controller.dart';
 import 'features/auth/screens/login_screen.dart';
 import 'features/auth/screens/register_screen.dart';
 import 'features/auth/screens/splash_screen.dart';
+import 'features/dashboard/nav_destinations.dart';
+import 'features/dashboard/screens/coming_soon_screen.dart';
 import 'features/dashboard/screens/dashboard_screen.dart';
+import 'features/dashboard/widgets/app_shell.dart';
 
 abstract final class Routes {
   static const splash = '/splash';
@@ -53,7 +56,21 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: Routes.splash, builder: (_, _) => const SplashScreen()),
       GoRoute(path: Routes.login, builder: (_, _) => const LoginScreen()),
       GoRoute(path: Routes.register, builder: (_, _) => const RegisterScreen()),
-      GoRoute(path: Routes.dashboard, builder: (_, _) => const DashboardScreen()),
+      ShellRoute(
+        builder: (context, state, child) =>
+            AppShell(location: state.matchedLocation, child: child),
+        routes: [
+          for (final destination in navDestinations)
+            GoRoute(
+              path: destination.path,
+              pageBuilder: (_, _) => NoTransitionPage(
+                child: destination.path == Routes.dashboard
+                    ? const DashboardScreen()
+                    : ComingSoonScreen(destination: destination),
+              ),
+            ),
+        ],
+      ),
     ],
   );
 

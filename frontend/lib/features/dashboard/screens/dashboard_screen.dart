@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../auth/providers/auth_controller.dart';
+import '../../../core/theme/app_spacing.dart';
 
-class DashboardScreen extends ConsumerWidget {
+class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(authControllerProvider).value;
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text('Signed in as ${user?.firstName} ${user?.lastName}'),
-            TextButton(
-              onPressed: () => ref.read(authControllerProvider.notifier).logout(),
-              child: const Text('Logout'),
-            ),
-          ],
-        ),
-      ),
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpacing.contentGutter),
+      children: const [],
     );
   }
 }

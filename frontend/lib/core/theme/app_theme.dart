@@ -57,6 +57,17 @@ abstract final class AppTheme {
         surfaceTintColor: Colors.transparent,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.md)),
       ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.navy,
+          backgroundColor: AppColors.surface,
+          side: const BorderSide(color: AppColors.navy),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.md)),
+          padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg, vertical: AppSpacing.sm),
+          minimumSize: const Size(0, 36),
+          textStyle: AppTextStyles.bodySmall.copyWith(fontWeight: FontWeight.w500),
+        ),
+      ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(color: AppColors.primary),
     );
   }

@@ -10,6 +10,10 @@ abstract final class AppSpacing {
   static const inputHeight = 48.0;
   static const buttonHeight = 52.0;
   static const mobileGutter = 24.0;
+
+  static const sidebarWidth = 240.0;
+  static const headerHeight = 96.0;
+  static const contentGutter = 28.0;
 }
 
 abstract final class AppRadius {

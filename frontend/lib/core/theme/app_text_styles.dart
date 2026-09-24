@@ -36,8 +36,17 @@ abstract final class AppTextStyles {
     height: 30 / 18,
   );
 
-  static final pageTitle = _base.copyWith(fontSize: 20, fontWeight: FontWeight.w600);
-  static final pageSubtitle = _base.copyWith(fontSize: 12, color: AppColors.textSecondary);
+  static final pageTitle = _base.copyWith(fontSize: 20, fontWeight: FontWeight.w600, height: 1.3);
+  static final pageSubtitle = _base.copyWith(
+    fontSize: 12,
+    color: AppColors.textMuted,
+    height: 20 / 12,
+  );
+  static final userName = _base.copyWith(
+    fontSize: 14,
+    color: AppColors.textSecondary,
+    height: 20 / 14,
+  );
   static final sectionTitle = _base.copyWith(fontSize: 24, fontWeight: FontWeight.w600);
   static final cardTitle = _base.copyWith(fontSize: 18, color: AppColors.textHeading);
 
