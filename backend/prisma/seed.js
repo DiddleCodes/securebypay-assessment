@@ -129,7 +129,7 @@ async function main() {
 
     await tx.shipmentStat.deleteMany();
     await tx.shipmentStat.createMany({ data: stats });
-  });
+  }, { maxWait: 10_000, timeout: 30_000 });
 
   console.log(`Seeded ${DEMO_EMAIL} with ${shipments.length} shipments and ${stats.length} days of stats`);
 }
