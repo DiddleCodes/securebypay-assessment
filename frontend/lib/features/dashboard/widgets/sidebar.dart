@@ -16,7 +16,6 @@ class Sidebar extends ConsumerWidget {
 
   final String location;
 
-  /// Called after a destination is chosen, e.g. to close the drawer.
   final VoidCallback? onNavigate;
 
   @override
@@ -32,7 +31,6 @@ class Sidebar extends ConsumerWidget {
     return Container(
       width: AppSpacing.sidebarWidth,
       color: AppColors.surface,
-      // Painted over the content so the border doesn't narrow the layout and shift items off-centre
       foregroundDecoration: const BoxDecoration(
         border: Border(right: BorderSide(color: AppColors.border)),
       ),
@@ -42,7 +40,6 @@ class Sidebar extends ConsumerWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                // Empty brand strip lining up with the page header, as in the design; pointless in a drawer
                 if (onNavigate == null)
                   Container(
                     height: AppSpacing.headerHeight,

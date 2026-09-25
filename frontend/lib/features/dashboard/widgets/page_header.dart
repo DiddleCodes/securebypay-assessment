@@ -12,7 +12,6 @@ class PageHeader extends StatelessWidget {
   final String title;
   final String subtitle;
 
-  /// Shows a menu button that opens the navigation drawer when set.
   final VoidCallback? onMenuTap;
 
   @override
@@ -20,7 +19,6 @@ class PageHeader extends StatelessWidget {
     final compact = onMenuTap != null;
 
     return Container(
-      // Fixed at the design's 96px on desktop; the compact header grows with its wrapped subtitle
       height: compact ? null : AppSpacing.headerHeight,
       constraints: const BoxConstraints(minHeight: AppSpacing.headerHeight),
       padding: compact
@@ -54,7 +52,6 @@ class PageHeader extends StatelessWidget {
                 Text(title, style: AppTextStyles.pageTitle),
                 const SizedBox(height: 4),
                 ConstrainedBox(
-                  // Wraps after "see all" like the design
                   constraints: const BoxConstraints(maxWidth: 470),
                   child: Text(
                     subtitle,

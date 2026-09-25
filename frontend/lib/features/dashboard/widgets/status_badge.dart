@@ -26,7 +26,6 @@ class StatusBadge extends StatelessWidget {
         color: background,
         borderRadius: BorderRadius.circular(AppRadius.md),
       ),
-      // widthFactor keeps the badge hugging its label instead of filling the available width
       child: Center(
         widthFactor: 1,
         child: Text(status.label, style: AppTextStyles.badge.copyWith(color: foreground)),

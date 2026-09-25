@@ -8,7 +8,6 @@ const { jwtSecret, jwtExpiresIn } = require('../config');
 
 const SALT_ROUNDS = 10;
 
-// Compared against when the email doesn't exist so both failure paths take the same time
 const DUMMY_HASH = bcrypt.hashSync('not-a-real-password', SALT_ROUNDS);
 
 const publicUserFields = {
@@ -23,7 +22,6 @@ const publicUserFields = {
   createdAt: true,
 };
 
-// Gives a new account a few shipments this month and last so the dashboard has something to show
 function sampleShipments(now = new Date()) {
   const thisMonth = [startOfMonth(now), now];
   const lastMonth = [startOfMonth(now, -1), startOfMonth(now)];

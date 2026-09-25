@@ -56,7 +56,6 @@ class PhoneField extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Reads as a placeholder until a number is entered, as in the design
                 ValueListenableBuilder(
                   valueListenable: controller,
                   builder: (context, value, _) => Text(

@@ -42,7 +42,6 @@ class StatCard extends StatelessWidget {
     final change = stat.changePercent;
 
     return Container(
-      // Slightly more top than bottom padding, matching where the design places the content
       padding: const EdgeInsets.fromLTRB(AppSpacing.lg, 18, AppSpacing.lg, 14),
       decoration: BoxDecoration(
         color: AppColors.surface,

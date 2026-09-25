@@ -34,7 +34,6 @@ class PrimaryButton extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: radius,
             border: Border.all(color: AppColors.primary),
-            // Thin darker bands at the top and bottom edges give the design's inset look
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -65,7 +64,6 @@ class PrimaryButton extends StatelessWidget {
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
-                        // Keeps the label's width while loading so the button doesn't resize
                         Opacity(
                           opacity: isLoading ? 0 : 1,
                           child: Text(label, style: AppTextStyles.button),

@@ -21,7 +21,6 @@ class AuthPanel extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.hardEdge,
         children: [
-          // OverflowBox keeps the map at its native size, anchored top-left, clipped when the panel is smaller
           Positioned.fill(
             child: OverflowBox(
               alignment: Alignment.topLeft,
@@ -63,7 +62,6 @@ class AuthPanel extends StatelessWidget {
   }
 }
 
-/// Places the copy 720px down as in the design, lifting it on short windows so it never runs off the bottom.
 class _PanelCopyLayout extends SingleChildLayoutDelegate {
   static const _left = 70.0;
   static const _top = 720.0;

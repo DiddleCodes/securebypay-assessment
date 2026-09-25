@@ -33,7 +33,6 @@ async function countByDirection(userId, createdAt) {
 }
 
 function compare(count, previousCount) {
-  // No baseline to compare against, so a percentage would be meaningless
   const changePercent =
     previousCount === 0 ? null : Math.round(((count - previousCount) / previousCount) * 100);
   return { count, previousCount, changePercent };

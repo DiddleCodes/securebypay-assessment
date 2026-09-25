@@ -22,7 +22,6 @@ class StatComparison {
   final int count;
   final int previousCount;
 
-  /// Null when there is no previous count to compare against.
   final int? changePercent;
 }
 
@@ -41,7 +40,6 @@ class Overview {
     imports: StatComparison.fromJson(json['imports'] as Map<String, dynamic>),
   );
 
-  /// In kobo.
   final int walletBalance;
   final StatComparison totalShipments;
   final StatComparison exports;

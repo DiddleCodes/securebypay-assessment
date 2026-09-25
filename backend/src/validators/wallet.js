@@ -1,6 +1,5 @@
 const { z } = require('zod');
 
-// Amounts are in kobo. Capped at N1,000,000 per top-up.
 const fundWalletSchema = z.object({
   amount: z
     .number({

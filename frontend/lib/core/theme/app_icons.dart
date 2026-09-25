@@ -1,9 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-/// The Lucide icons the app uses, pointing at the font bundled by lucide_icons_flutter.
-///
-/// Defined here instead of importing the package's LucideIcons class: that class declares tens of
-/// thousands of constants and overflows the stack when the debug web compiler loads it.
 abstract final class AppIcons {
   static const _family = 'Lucide';
   static const _package = 'lucide_icons_flutter';

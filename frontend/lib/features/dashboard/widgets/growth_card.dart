@@ -60,7 +60,6 @@ class GrowthCard extends ConsumerWidget {
                 error: error,
                 onRetry: () => ref.invalidate(growthProvider),
               ),
-              // Keeps the previous range's chart on screen while the next one loads
               AsyncValue(:final value?) => Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: GrowthChart(points: value),

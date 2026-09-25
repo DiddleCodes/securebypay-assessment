@@ -8,7 +8,6 @@ const { env, corsOrigins } = require('./config');
 
 const app = express();
 
-// Render sits behind a single proxy; needed for correct client IPs in rate limiting
 app.set('trust proxy', 1);
 
 app.use(helmet());

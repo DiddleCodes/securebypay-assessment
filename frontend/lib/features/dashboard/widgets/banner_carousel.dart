@@ -57,7 +57,6 @@ class _BannerCarouselState extends State<BannerCarousel> {
       duration: const Duration(milliseconds: 400),
       curve: Curves.easeInOut,
     );
-    // Restart so a manual choice gets a full interval on screen
     _startTimer();
   }
 
@@ -65,7 +64,6 @@ class _BannerCarouselState extends State<BannerCarousel> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // Proportions come from the 1141x245 design; small screens get a taller ratio for the text
         final width = constraints.maxWidth;
         final scale = (width / _BannerSlide.designWidth).clamp(0.5, 1.0);
         final height = (_BannerSlide.designHeight * scale).clamp(150.0, _BannerSlide.designHeight);

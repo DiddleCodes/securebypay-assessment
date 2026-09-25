@@ -16,7 +16,6 @@ const registerSchema = z.object({
     .regex(/^\d+$/, 'Phone number must contain digits only')
     .min(7, 'Phone number is too short')
     .max(15, 'Phone number is too long'),
-  // bcrypt ignores everything past 72 bytes
   password: z
     .string({ error: 'Password is required' })
     .min(8, 'Password must be at least 8 characters')

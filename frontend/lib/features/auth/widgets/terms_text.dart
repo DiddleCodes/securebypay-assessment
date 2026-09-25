@@ -11,7 +11,6 @@ class TermsText extends StatefulWidget {
   State<TermsText> createState() => _TermsTextState();
 }
 
-// Uses recognizers rather than TextLink so "privacy policy" can wrap mid-link like the design
 class _TermsTextState extends State<TermsText> {
   late final _privacy = TapGestureRecognizer()..onTap = _notAvailable;
   late final _terms = TapGestureRecognizer()..onTap = _notAvailable;

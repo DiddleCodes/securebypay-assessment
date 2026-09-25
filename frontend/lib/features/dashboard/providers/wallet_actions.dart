@@ -6,7 +6,6 @@ import 'shipments_controller.dart';
 
 final walletActionsProvider = Provider(WalletActions.new);
 
-/// Money-moving actions; each refreshes the parts of the dashboard it affects.
 class WalletActions {
   WalletActions(this._ref);
 

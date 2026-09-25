@@ -9,7 +9,6 @@ class TextLink extends StatelessWidget {
   final VoidCallback onTap;
   final TextStyle? style;
 
-  /// For use inside [Text.rich], keeping the link on the surrounding text's baseline.
   static WidgetSpan span(String text, {required VoidCallback onTap, TextStyle? style}) {
     return WidgetSpan(
       alignment: PlaceholderAlignment.baseline,

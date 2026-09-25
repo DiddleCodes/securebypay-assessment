@@ -10,10 +10,8 @@ const DEMO_EMAIL = 'demo@securebypay.test';
 const DEMO_PASSWORD = 'Demo@1234';
 const DEMO_BALANCE = 300_000_028;
 
-// Company-wide monthly shipment totals, oldest first, shaped like the design's growth chart
 const MONTHLY_TOTALS = [270, 320, 300, 360, 330, 440, 320, 490, 370, 620, 120, 980];
 
-// [monthsAgo, exports, imports]: gives roughly +90% this month against last month
 const DEMO_VOLUME = [
   [0, 19, 15],
   [1, 10, 8],
@@ -30,7 +28,6 @@ const DEMO_VOLUME = [
   [12, 5, 5],
 ];
 
-// Deterministic PRNG (mulberry32) so every seed run produces the same data
 function createRandom(seed) {
   let state = seed;
   return () => {
@@ -75,7 +72,6 @@ function buildDemoShipments(now, random) {
     }
   }
 
-  // Replace the three newest with the shipments shown in the design
   shipments.sort((a, b) => b.createdAt - a.createdAt);
   const designShipment = {
     senderName: 'Bunmi Tanny',

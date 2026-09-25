@@ -6,6 +6,5 @@ import 'app.dart';
 
 void main() {
   usePathUrlStrategy();
-  // Sections show their own error with a retry button, so Riverpod's silent auto-retry is disabled
   runApp(ProviderScope(retry: (_, _) => null, child: const App()));
 }

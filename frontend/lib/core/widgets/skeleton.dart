@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
 
-/// Pulsing placeholder shown while a section loads.
 class Skeleton extends StatefulWidget {
   const Skeleton({super.key, this.width, this.height, this.radius = AppRadius.sm});
 

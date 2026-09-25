@@ -22,7 +22,6 @@ abstract final class AppColors {
   static const icon = Color(0xFFA3A3A3);
   static const textHeading = Color(0xFF1D2939);
   static const onPrimary = Color(0xFFFFFFFF);
-  // Mint-tinted white the design uses for text on brand surfaces (buttons, panel copy, active nav)
   static const onBrand = Color(0xFFEBFFE2);
 
   static const positive = Color(0xFF0A7D00);
@@ -32,12 +31,10 @@ abstract final class AppColors {
   static const skeleton = Color(0xFFEEEEEE);
   static const dotInactive = Color(0xFFD4D4D4);
   static const chevron = Color(0xFF003701);
-  // Figma layers white at 70% / 90% over the primary balance card
   static const balanceLabel = Color(0xB3FFFFFF);
   static const balanceAmount = Color(0xE6FFFFFF);
   static const bannerStripe = Color(0x12000000);
 
-  // The chart card uses the Untitled UI grey scale
   static const chartAxis = Color(0xFF98A2B3);
   static const chartGrid = Color(0xFFE4E7EC);
   static const segmentTrack = Color(0xFFF2F4F7);

@@ -5,7 +5,6 @@ import '../../../core/theme/app_spacing.dart';
 import '../../../core/utils/breakpoints.dart';
 import 'auth_panel.dart';
 
-/// Split auth page from the 1440x1024 design: a 700px form column and the map panel.
 class AuthLayout extends StatelessWidget {
   const AuthLayout({
     super.key,
@@ -22,7 +21,6 @@ class AuthLayout extends StatelessWidget {
   static const _formRightSpace = 64.0;
   static const formWidth = 536.0;
 
-  /// Distance from the top of the page to the form at the design height.
   final double formTop;
   final String panelTitle;
   final String panelBody;
@@ -34,10 +32,8 @@ class AuthLayout extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
 
     if (screen.isDesktop) {
-      // Below 1440 the form column gives up space first so the panel copy isn't squeezed
       final columnWidth = (size.width - _panelWidth).clamp(_minFormColumnWidth, _formColumnWidth);
       final formLeft = columnWidth - formWidth - _formRightSpace;
-      // Scale the top offset down on shorter windows so the form stays in view
       final top = (formTop * size.height / _designHeight).clamp(48.0, formTop);
       return Scaffold(
         body: Row(

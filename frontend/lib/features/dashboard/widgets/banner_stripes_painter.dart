@@ -4,13 +4,11 @@ import 'package:flutter/rendering.dart';
 
 import '../../../core/theme/app_colors.dart';
 
-/// Low-contrast diagonal bands matching the banner artwork: -22.7deg, irregular widths.
 class BannerStripesPainter extends CustomPainter {
   const BannerStripesPainter();
 
   static const _angle = -22.7 * math.pi / 180;
 
-  // Alternating band and gap widths, repeated; irregular so the pattern doesn't look mechanical
   static const _pattern = [14.0, 9.0, 4.0, 18.0, 22.0, 6.0, 3.0, 12.0, 9.0, 26.0, 5.0, 8.0];
 
   @override

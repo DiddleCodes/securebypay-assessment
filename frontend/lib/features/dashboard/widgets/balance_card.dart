@@ -9,7 +9,6 @@ import 'fund_wallet_dialog.dart';
 class BalanceCard extends StatelessWidget {
   const BalanceCard({super.key, required this.balance});
 
-  /// In kobo.
   final int balance;
 
   @override

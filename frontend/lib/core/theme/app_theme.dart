@@ -13,7 +13,6 @@ abstract final class AppTheme {
 
     return ThemeData(
       useMaterial3: true,
-      // Desktop platforms default to compact density, which shrinks inputs and buttons below the design sizes
       visualDensity: VisualDensity.standard,
       fontFamily: AppTextStyles.fontFamily,
       scaffoldBackgroundColor: AppColors.background,
@@ -33,8 +32,6 @@ abstract final class AppTheme {
         fillColor: AppColors.surface,
         hoverColor: Colors.transparent,
         isDense: true,
-        // Outlined decorators add 4px before the text, so 12 here lands it 16px in like the design.
-        // Vertical padding plus the 16px input line and 1px borders gives the 48px field.
         contentPadding: const EdgeInsets.symmetric(horizontal: AppSpacing.md, vertical: 14),
         hintStyle: AppTextStyles.input.copyWith(color: AppColors.textPlaceholder),
         errorStyle: AppTextStyles.fieldError,

@@ -7,7 +7,6 @@ import '../nav_destinations.dart';
 import 'page_header.dart';
 import 'sidebar.dart';
 
-/// Signed-in layout: fixed sidebar on desktop, drawer below 1024px.
 class AppShell extends StatelessWidget {
   const AppShell({super.key, required this.location, required this.child});
 

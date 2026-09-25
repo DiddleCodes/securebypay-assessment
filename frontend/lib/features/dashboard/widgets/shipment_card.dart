@@ -88,7 +88,6 @@ class _Field extends StatelessWidget {
   }
 }
 
-/// Lays fields out in two columns on mobile, where the design's single row doesn't fit.
 class _TwoColumnWrap extends StatelessWidget {
   const _TwoColumnWrap({required this.children});
 
@@ -149,7 +148,6 @@ class _Summary extends StatelessWidget {
           children: [
             Expanded(
               child: mobile
-                  // Tracking IDs need the full width on phones or they get truncated
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
@@ -160,7 +158,6 @@ class _Summary extends StatelessWidget {
                     )
                   : Row(
                       children: [
-                        // Column widths from the design: 272 / 205 / rest
                         Expanded(flex: 272, child: tracking),
                         Expanded(flex: 205, child: sender),
                         Expanded(flex: 592, child: receiver),

@@ -7,7 +7,6 @@ import 'app_text_styles.dart';
 abstract final class AppButtonStyles {
   static final _shape = RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppRadius.md));
 
-  /// White with a light border, as used by "See All" and the period filter.
   static final neutral = OutlinedButton.styleFrom(
     foregroundColor: AppColors.textMuted,
     backgroundColor: AppColors.surface,

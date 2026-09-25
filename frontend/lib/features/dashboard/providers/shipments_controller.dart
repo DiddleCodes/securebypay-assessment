@@ -34,7 +34,6 @@ class ShipmentsState {
 final shipmentsControllerProvider =
     AsyncNotifierProvider.autoDispose<ShipmentsController, ShipmentsState>(ShipmentsController.new);
 
-/// Newest-first shipments, loaded a page at a time.
 class ShipmentsController extends AsyncNotifier<ShipmentsState> {
   static const pageSize = 10;
 
@@ -46,7 +45,6 @@ class ShipmentsController extends AsyncNotifier<ShipmentsState> {
     return ShipmentsState(items: first.items, page: first.page, totalPages: first.totalPages);
   }
 
-  /// Rethrows so the caller can report the failure; the loaded items are kept.
   Future<void> loadMore() async {
     final current = state.value;
     if (current == null || !current.hasMore || current.isLoadingMore) return;

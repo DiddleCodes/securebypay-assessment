@@ -8,7 +8,6 @@ import 'token_storage.dart';
 const apiBaseUrl = String.fromEnvironment('API_URL', defaultValue: 'http://localhost:4000/api');
 
 final dioProvider = Provider<Dio>((ref) {
-  // Generous timeouts: the free Render instance can take ~50s to wake from sleep
   final dio = Dio(
     BaseOptions(
       baseUrl: apiBaseUrl,

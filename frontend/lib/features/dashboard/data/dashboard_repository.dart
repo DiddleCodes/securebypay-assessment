@@ -36,7 +36,6 @@ class DashboardRepository {
     (json) => Shipment.fromJson(json['shipment'] as Map<String, dynamic>),
   );
 
-  /// Returns the new wallet balance in kobo.
   Future<int> fundWallet(int amountKobo) => _request(
     () => _dio.post('/wallet/fund', data: {'amount': amountKobo}),
     (json) => json['walletBalance'] as int,

@@ -29,7 +29,6 @@ function errorHandler(err, req, res, next) {
     return res.status(400).json({ message: 'Malformed JSON body' });
   }
 
-  // Unique constraint race: two requests passed the existence check at the same time
   if (err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2002') {
     return res.status(409).json({ message: 'Resource already exists' });
   }

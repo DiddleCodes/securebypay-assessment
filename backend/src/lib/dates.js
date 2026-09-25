@@ -1,4 +1,3 @@
-// All period boundaries are UTC so results don't depend on the server's timezone
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 function startOfDay(date) {

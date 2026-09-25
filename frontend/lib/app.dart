@@ -30,8 +30,6 @@ final routerProvider = Provider<GoRouter>((ref) {
       final auth = ref.read(authControllerProvider);
       final location = state.matchedLocation;
 
-      // Hold every route on the splash screen until the saved session is checked,
-      // remembering where the user was headed
       if (auth.isLoading) {
         if (location == Routes.splash) return null;
         return Uri(path: Routes.splash, queryParameters: {'from': state.uri.toString()}).toString();

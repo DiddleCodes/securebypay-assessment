@@ -2,14 +2,12 @@ const { randomBytes } = require('node:crypto');
 const prisma = require('../lib/prisma');
 const HttpError = require('../lib/httpError');
 
-// walletBalance is a 32-bit Int column
 const MAX_BALANCE = 2_147_483_647;
 
 const reference = (prefix) => `${prefix}-${randomBytes(6).toString('hex').toUpperCase()}`;
 
 async function fundWallet(userId, amount) {
   return prisma.$transaction(async (tx) => {
-    // Conditional update keeps the balance check and the write atomic
     const { count } = await tx.user.updateMany({
       where: { id: userId, walletBalance: { lte: MAX_BALANCE - amount } },
       data: { walletBalance: { increment: amount } },
@@ -38,7 +36,6 @@ async function payForShipment(userId, trackingId) {
       throw new HttpError(404, 'Shipment not found');
     }
 
-    // Guarded on isPaid so two concurrent requests can't both pay
     const marked = await tx.shipment.updateMany({
       where: { id: shipment.id, isPaid: false },
       data: { isPaid: true },

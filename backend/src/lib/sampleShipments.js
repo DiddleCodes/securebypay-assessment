@@ -7,7 +7,6 @@ const NAMES = [
 
 const CITIES = ['Lagos', 'Oyo', 'Abuja', 'Kano', 'Port Harcourt', 'Enugu', 'Ibadan', 'Kaduna'];
 
-// Paid state follows status: delivered and in-transit shipments were paid before dispatch
 const STATUS_PAID = [
   ['DELIVERED', true],
   ['IN_TRANSIT', true],

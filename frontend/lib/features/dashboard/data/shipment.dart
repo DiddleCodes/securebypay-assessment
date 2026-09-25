@@ -54,7 +54,6 @@ class Shipment {
   final String deliveryCity;
   final String deliveryCountry;
 
-  /// In kobo.
   final int amount;
   final ShipmentStatus status;
   final bool isExport;

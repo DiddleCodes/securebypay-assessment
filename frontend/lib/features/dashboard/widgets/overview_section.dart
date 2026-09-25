@@ -33,7 +33,6 @@ class OverviewSection extends ConsumerWidget {
         ),
         const SizedBox(height: 23),
         switch (overview) {
-          // Retrying after an error: show the skeleton rather than the stale error
           AsyncValue(isLoading: true, hasValue: false) => const _CardsLoading(),
           AsyncData(:final value) => _Cards(overview: value, period: period),
           AsyncError(:final error) => SectionError(
@@ -79,9 +78,6 @@ class _CardsLoading extends StatelessWidget {
   }
 }
 
-/// Wide: balance and three stats in one row (450 : 213 x 3 in the design).
-/// Medium: balance on its own row with the stats below. Narrow: everything stacked.
-/// Based on the space the section actually gets, since the sidebar takes 240px on desktop.
 class _OverviewLayout extends StatelessWidget {
   const _OverviewLayout({required this.balance, required this.stats});
 

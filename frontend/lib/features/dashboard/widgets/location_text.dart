@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/theme/app_text_styles.dart';
 
-/// City and country with a flag. Only a Nigerian flag asset exists, matching the seeded routes.
 class LocationText extends StatelessWidget {
   const LocationText({super.key, required this.city, required this.country});
 

@@ -15,11 +15,9 @@ class GrowthChart extends StatelessWidget {
 
   static final _axisFormat = NumberFormat('#,##0', 'en_US');
 
-  // Space either side of the first/last point as a fraction of the point spacing, from the design
   static const _leadingInset = 0.67;
   static const _trailingInset = 0.52;
 
-  /// Rounds the axis up to five evenly spaced "nice" steps (e.g. 980 -> 0..1000 by 200).
   static double _niceInterval(int maxValue) {
     final raw = math.max(maxValue, 5) / 5;
     final magnitude = math.pow(10, (math.log(raw) / math.ln10).floor()).toDouble();
@@ -35,7 +33,6 @@ class GrowthChart extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        // Room for a label roughly every 48px, so daily ranges and narrow screens stay readable
         final maxLabels = math.max(2, (constraints.maxWidth - 52) ~/ 48);
         final labelEvery = (points.length / maxLabels).ceil();
         return _chart(interval, labelEvery);
@@ -58,7 +55,6 @@ class GrowthChart extends StatelessWidget {
         gridData: FlGridData(
           drawVerticalLine: false,
           horizontalInterval: interval,
-          // The zero line is the solid bottom border instead
           checkToShowHorizontalLine: (value) => value > 0,
           getDrawingHorizontalLine: (_) =>
               const FlLine(color: AppColors.chartGrid, strokeWidth: 1, dashArray: [4, 4]),

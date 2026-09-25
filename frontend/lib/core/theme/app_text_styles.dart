@@ -10,7 +10,6 @@ abstract final class AppTextStyles {
     color: AppColors.textPrimary,
     fontWeight: FontWeight.w400,
     height: 1.4,
-    // Matches Figma/CSS, which split extra line height evenly above and below the glyphs
     leadingDistribution: TextLeadingDistribution.even,
   );
 

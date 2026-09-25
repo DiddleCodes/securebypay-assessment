@@ -20,7 +20,6 @@ class AuthHeading extends StatelessWidget {
   final String linkLabel;
   final VoidCallback onLinkTap;
 
-  /// Chosen so the subtitle wraps at the same word as the design.
   final double maxWidth;
 
   @override

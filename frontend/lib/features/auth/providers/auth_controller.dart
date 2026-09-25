@@ -7,7 +7,6 @@ import '../data/user.dart';
 
 final authControllerProvider = AsyncNotifierProvider<AuthController, User?>(AuthController.new);
 
-/// Holds the signed-in user, or null when signed out. Loading only while restoring a session.
 class AuthController extends AsyncNotifier<User?> {
   AuthRepository get _repository => ref.read(authRepositoryProvider);
   TokenStorage get _tokenStorage => ref.read(tokenStorageProvider);

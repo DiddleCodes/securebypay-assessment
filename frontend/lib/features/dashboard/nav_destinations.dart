@@ -23,7 +23,6 @@ const _addressesSubtitle =
     'and see all your saved addresses';
 
 const navDestinations = [
-  // The design's dashboard header reads "Invite & Earn" with this subtitle; kept verbatim
   NavDestination(
     label: 'Dashboard',
     path: '/dashboard',

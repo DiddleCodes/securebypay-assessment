@@ -5,7 +5,6 @@ import 'token_storage.dart';
 class AuthInterceptor extends Interceptor {
   AuthInterceptor(this._tokenStorage, {required this.onUnauthorized});
 
-  // A 401 here means wrong credentials, not an expired session
   static const _credentialPaths = {'/auth/login', '/auth/register'};
 
   final TokenStorage _tokenStorage;

@@ -121,7 +121,6 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
             onLinkTap: () => context.go(Routes.login),
             maxWidth: 468,
           ),
-          // Sign-up sits 1px lower than sign-in in the design from here, and its first row 1px taller
           const SizedBox(height: AppSpacing.xxl + 1),
           AutofillGroup(
             child: Form(
