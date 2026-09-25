@@ -2,11 +2,11 @@
 
 My submission for the SecureByPay Full Stack Developer assessment: the Myafrimall sign in, sign up and dashboard screens built from the Figma design in Flutter Web, backed by a Node.js/Express API with PostgreSQL.
 
-- **Live demo:** _link added once deployed_
-- **API:** _link added once deployed_ (health check at `/api/health`)
+- **Live demo:** https://securebypay-ayanleke.netlify.app
+- **API:** https://securebypay-api.onrender.com/api (health check at [`/api/health`](https://securebypay-api.onrender.com/api/health))
 - **Demo account:** `demo@securebypay.test` / `Demo@1234`
 
-The API runs on Render's free tier, so if it has been idle the first request can take up to a minute while it wakes up. After that it's quick.
+The API is on Render's free tier, which puts it to sleep when idle. If nobody has used it for a while, the first request can take up to a minute while it wakes up; after that it responds normally. If the login page seems stuck on first load, give it a moment.
 
 You can also register a new account. New accounts start with a zero balance and a few sample shipments, so the dashboard has something to show; use Fund Wallet to top up and try paying for a shipment.
 
